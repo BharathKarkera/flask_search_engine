@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				background-repeat: no-repeat;
+				background-attached: fixed;
+				background-size: cover;
+				background-image: url({{url_for('static',filename='img/background_image2.png')}})
+			}
+		</style>
+
+		<meta charset="UTF-8">
+		<title>Bharath</title>
+		<link rel="shortcut icon" href="{{url_for('static', filename='favicon.ico')}}">
+		<link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+	</head>
+	<body>
+		<br>
+		<form action="search" method="post">
+			{% for message in get_flashed_messages() %}
+				<p> {{message}} </p>
+			{% endfor %}
+			<br>
+			<input type="text" name="search_parameter">
+			<br>
+			<input type="submit" value="SEARCH" id="search">
+		</form>
+	</body>
+</html>
