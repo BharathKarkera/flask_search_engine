@@ -41,4 +41,4 @@ def greet():
     return  flask.render_template("test.html"),{"Refresh":"5; url=http://localhost:5000"}
 
 
-app.run(host="0.0.0.0")
+app.run(host="0.0.0.0",ssl_context=('cert.pem', 'key.pem'))
