@@ -38,7 +38,7 @@ def greet():
 
     flask.flash("Showing results for : "+str(flask.request.form['search_parameter'])+" ")
 
-    return  flask.render_template("test.html"),{"Refresh":"5; url=http://localhost:5000"}
+    return  flask.render_template("test.html"),{"Refresh":"5; url=https://localhost:5000"}
 
 
 app.run(host="0.0.0.0",ssl_context=('cert.pem', 'key.pem'))
